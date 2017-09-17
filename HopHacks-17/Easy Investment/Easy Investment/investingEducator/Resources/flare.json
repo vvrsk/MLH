@@ -1,0 +1,137 @@
+{
+  "name": "Advertising",
+  "children": 
+  [{
+    "name": "Consumer Services",
+    "children": 
+    [{
+      "name": "axis",
+      "children": [
+      {"name": "Peter",
+        "children": [
+         {"name": "Peter", "size": 416}
+        ]},
+      {"name": "Mary",
+        "children": [
+         {"name": "Mary", "size": 300}
+        ]},
+      {"name": "Lucy",
+        "children": [
+         {"name": "Lucy", "size": 300}
+        ]},
+      {"name": "Paul",
+        "children": [
+         {"name": "Paul", "size": 550}
+        ]}
+      ]
+    }]
+  },
+  {
+    "name": "Consumer Non-Durables",
+    "children": 
+    [{
+      "name": "axis",
+      "children": [
+      {"name": "John",
+        "children": [
+         {"name": "John", "size": 4116}
+        ]},
+      {"name": "mary",
+        "children": [
+         {"name": "Mary", "size": 300}
+        ]},
+      {"name": "Bob",
+        "children": [
+         {"name": "Bob", "size": 250}
+        ]}
+      ]
+    }]
+  },
+  {
+    "name": "Technology",
+    "children": 
+    [{
+      "name": "axis",
+      "children": [
+      {"name": "John",
+        "children": [
+         {"name": "John", "size": 4116}
+        ]},
+      {"name": "mary",
+        "children": [
+         {"name": "Mary", "size": 300}
+        ]},
+      {"name": "Bob",
+        "children": [
+         {"name": "Bob", "size": 250}
+        ]}
+      ]
+    }]
+  },
+  {
+    "name": "Transportation",
+    "children": 
+    [{
+      "name": "axis",
+      "children": [
+      {"name": "Ferrari",
+        "children": [
+         {"name": "John", "size": 4116}
+        ]},
+      {"name": "BMW",
+        "children": [
+         {"name": "BMW", "size": 300}
+        ]},
+      {"name": "Rolls-Royce",
+        "children": [
+         {"name": "Rolls Royce", "size": 250}
+        ]}
+      ]
+    }]
+  },
+  {
+    "name": "Miscellaneous",
+    "children": 
+    [{
+      "name": "axis",
+      "children": 
+      [{
+        "name": "axis",
+        "children": [
+        {"name": "Peter",
+          "children": [
+           {"name": "Peter", "size": 416}
+          ]},
+        {"name": "Mary",
+          "children": [
+           {"name": "Mary", "size": 300}
+          ]},
+        {"name": "Lucy",
+          "children": [
+           {"name": "Lucy", "size": 300}
+          ]},
+        {"name": "Mary",
+          "children": [
+           {"name": "Mary", "size": 300}
+          ]},
+        {"name": "Lucy",
+          "children": [
+           {"name": "Lucy", "size": 300}
+          ]},
+        {"name": "Mary",
+          "children": [
+           {"name": "Mary", "size": 300}
+          ]},
+        {"name": "Lucy",
+          "children": [
+           {"name": "Lucy", "size": 300}
+          ]},
+        {"name": "Paul",
+          "children": [
+           {"name": "Paul", "size": 550}
+          ]}
+        ]
+      }]
+    }]
+  }]
+}

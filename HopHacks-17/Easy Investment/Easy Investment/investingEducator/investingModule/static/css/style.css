@@ -1,0 +1,104 @@
+header .navbar-light .navbar-brand{
+text-transform: uppercase;
+font-size: 32px;
+}
+header .nav{
+	margin-top: 10px;
+}
+header a.nav-link{
+padding: 10px 12px;
+}
+.jumbotron{
+	text-align: center;
+}
+.services{
+	padding: 100px 0;
+	text-align: center;
+}
+footer{
+	background-color: #eceeef;
+	text-align: center;
+	padding: 10px 0;
+}
+footer p{
+	margin: 0;
+	font-size: 13px;
+}
+@media (max-width: 33.9em) {
+	.navbar-toggler{
+		float: left;
+	}
+	.navbar-brand{
+		margin-top: 0;
+		float: none;
+	}
+	header .nav{
+		float: none !important;
+	}
+	.navbar-nav .nav-item{
+		float: none;
+	}
+	.navbar-nav .nav-item + .nav-item{
+		margin-left: 0;
+	}
+}
+
+$height: 2.8em;
+$width: 10em;
+$button-color: #a6bddb;
+
+@mixin center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+*,*:before,*:after{
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+body{
+  background: #222;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+a {
+  @include center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid $button-color;
+  border-radius: 8px;
+  height:$height;
+  width:$width;
+  padding: 0;
+  outline: none;
+  overflow: hidden;
+  color: $button-color;
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+  line-height: 250%;
+  
+  &::before{
+    @include center;
+    content:'';
+    border-radius: 50%;
+    display: block;
+    width: $width*2;
+    height: $width*2;
+    line-height: $width*2;
+    left: -$width/2;
+    text-align: center;
+    transition: box-shadow 0.5s ease-out;
+    z-index: -1;
+  }
+  
+ 

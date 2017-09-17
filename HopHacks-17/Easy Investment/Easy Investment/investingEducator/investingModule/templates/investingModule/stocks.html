@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Investing is Fun!</title>
+	<form  id="landingPage" method="post" action="/investingModule/userDetails">
+    <!-- Bootstrap CSS -->
+	  <script src="/static/js/jquery.min.js"></script>
+	   <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+   
+<!-- Header/Navigation -->
+<header>
+ 
+     <h1 class="display-3" style="font-family: 'Anton', sans-serif; padding: 5px 10px;">Investing is Fun</h1>
+  </div>
+</nav>
+</header>
+<!-- /End of Header/Navigation -->
+
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+ {% csrf_token %}
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <img src="/static/images/slider2.jpg" >
+    </div>
+  </div>
+ 
+</div>
+
+<form  id="profilePage" method="post" action="/investingModule/userDetails">
+<!-- Jumbotron -->
+
+
+<table class="table">
+	 <thead>
+        <tr>
+            <th>Selected Company</th>
+        
+        </tr>
+    </thead>
+   <tbody>
+            {% for key,value in listOfLikedPagesMain.items %}
+			{% for key2,value2 in value.items %}
+				<tr><td><h4><button type="submit" name="link" value = {{key2}}>{{key2}} </button></h4></td><td></td></tr>	
+			{% endfor %}
+            {% endfor %}
+    </tbody>	
+</table>
+    <!-- jQuery first, then Bootstrap JS. -->
+ 
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    </script>
+  </body>
+</html>

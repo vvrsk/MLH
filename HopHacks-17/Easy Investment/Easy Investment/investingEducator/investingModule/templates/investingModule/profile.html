@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Investing is Fun!</title>
+	<form  id="landingPage" method="post" action="/investingModule/stockDetails">
+    <!-- Bootstrap CSS -->
+	<script src="/static/js/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+	<script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+	<script src="/static/js/sweetalert.min.js"></script>	
+
+  </head>
+<body>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+ {% csrf_token %}
+  <div class="carousel-inner" >
+    <div class="image">
+      <img style="position: relative;width: 100%;"src="/static/images/slider1.jpg" >
+	  <h1 style="position: absolute; top: 75px; left:30px; width:100%	;font-size:60px;font-family: 'Anton', sans-serif; padding: 5px 10px; ">Fear no more, Investing is Fun</h1>
+  </div>
+  </div>
+</div>
+
+<form  id="profilePage" method="post" action="/investingModule/userDetails">
+
+
+<table class="table">
+	 <thead >
+        <tr>
+            <th><h3 style="font-family: 'Work Sans', sans-serif; font-weight: bold;">These are some of your favourites!<br/> <br/>Why not earn some cash for following them. Click on any of the links below to learn more</h3>
+		</tr>
+    </thead>
+   <tbody>
+            {% for key,value in listOfLikedPagesMain.items %}
+			{% for key2,value2 in value.items %}
+				<tr><td><h4><button  class="btn btn-info btn-lg btn-block" aria-pressed="true" onclick="sweetAlert('Information',' {% autoescape off %}{{value2}}{% endautoescape %}');return false;" >{{key2}} </button></h4>	
+			
+			<div >
+				<h4 style="font-family: 'Work Sans', sans-serif; text-align:center"></h4>
+				
+			</div></td></tr>
+			
+			{% endfor %}
+            {% endfor %}
+    </tbody>
+</table>
+    <!-- jQuery first, then Bootstrap JS. -->
+ <div style="text-align:center"><h3><button class="btn btn-secondary " type="submit" style="text-align:center;" aria-pressed="true">Show me more Stocks</button></h3></div>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    </script>
+  </body>
+</html>
